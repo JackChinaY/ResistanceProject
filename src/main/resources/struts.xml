@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<!-- "http://struts.apache.org/dtds/struts-2.1.8.dtd"> -->
+<struts>
+    <package name="default" namespace="/" extends="struts-default"></package>
+    <!--2.5以上的版本需要主动设置strict-method-invocation="false"，以便可以使用通配符-->
+    <package name="control" namespace="/" extends="struts-default" strict-method-invocation="false">
+        <action name="Action_*" class="com.rp.action.RpAction" method="{1}"></action>
+    </package>
+
+    <!-- 配置为开发模式 -->
+    <!-- <constant name="struts.devMode" value="true" /> -->
+    <!-- 配置扩展名为action ? -->
+    <!-- <constant name="struts.action.extension" value="action" />-->
+    <!-- 配置主题 -->
+    <!-- <constant name="struts.ui.theme" value="simple" /> -->
+    <!-- <package name="control" extends="json-default">
+        <action name="searchAll" class="control.ProductControl" method="searchAll">
+            <result type="json">
+            </result>
+        </action>
+        <action name="searchSelfMembers" class="control.MembersControl"
+            method="searchSelfMembers">
+            <result type="json">
+            </result>
+        </action>
+        <action name="SaveShipmentForm" class="control.ShipmentFormControl"
+            method="SaveShipmentForm">
+            <result type="json">
+            </result>
+        </action>
+        <action name="searchStorageByGoods" class="control.SearchStorageControl"
+            method="searchStorageByGoods">
+            <result type="json">
+            </result>
+        </action>
+        <action name="connectNet" class="control.NetControl" method="connectNet">
+        </action>
+    </package> -->
+</struts>
