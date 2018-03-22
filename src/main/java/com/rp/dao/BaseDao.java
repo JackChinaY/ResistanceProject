@@ -1,5 +1,5 @@
 package com.rp.dao;
-/*
+/**
  * DAO层 常用的基本方法，封装在BaseDAO中
  */
 
